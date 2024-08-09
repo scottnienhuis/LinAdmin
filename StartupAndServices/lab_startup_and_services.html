@@ -239,7 +239,7 @@ diff httpd.conf httpd.conf.back
 </li>
 <li>Check our work from <strong>w01</strong> with curl
 <pre class="code">
-curl http://s01 &gt; /dev/null
+curl http://s01:8080 &gt; /dev/null
 </pre>
 </li>
 <li>Did it work?
@@ -272,7 +272,7 @@ systemctl reload httpd
 </li>
 <li>Check from w01 using curl
 <pre class="code">
-curl http://s01
+curl http://s01:8080
 </pre>
 </li>
 <li>Reboot <strong>s01</strong> </li>

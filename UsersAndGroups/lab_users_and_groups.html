@@ -251,6 +251,11 @@ usermod -L kapil
 grep kapil /etc/shadow
 </pre>
 	</li>
+	<li>Unlock Kapil's account
+<pre class="code">
+usermod -U kapil
+</pre>
+	</li>
 				What's the difference? (You will need to know for the quiz.)
 
 </ol>
@@ -341,7 +346,7 @@ cat /share/athletes/for_kapil.txt
 <hr>
 <h2>Part G: Deleting Users</h2>
 <ol>
-<li>Make sure Eddy is not logged on. (Hint try the <span class=cmd>who</span> command. </li>
+<li>Make sure Eddy is not logged on. Hint try the <span class=cmd>who</span> command. </li>
 <li>Remove Eddy's account, but leave his files behind.
 <pre class="code">
 userdel eddy

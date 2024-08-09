@@ -286,7 +286,7 @@ default via 10.2.1.20 dev enp0s3 proto static metric 100
 				<em>Imagine what happens to the ping packet we send to w01.  
 				<br>s02 sends it to s01
 				<br>s01 forwards it to w01
-				<br>w01 say, "right a ping request, no problem I'll send a response to 10.2.1.30, I don't have a direct route so I'll send the packet to my default router (which the VirtualBox NAT router)
+				<br>w01 says, "I have been sent a ping request, no problem I'll send a response to 10.2.1.30, I don't have a direct route so I'll send the packet to my default router (which the VirtualBox NAT router)
 
 				</em>
 				</span>
@@ -329,6 +329,7 @@ iface enp0s8 inet static
 	address 10.1.1.10/24
 	up ip route add 10.2.1.0/24 via 10.1.1.20
 </pre>
+<em>Note: This configuration method is specific to Debian</em>
 </li>
 
 </li>

@@ -32,7 +32,7 @@ Relax and take a deep breath, it's time to dive back into UNIX.  This lab will r
 <h2>Prerequisites:</h2>
 <h3>Before you start this lab you must have:</h3>
 	<ul>
-		<li>The comp-10018 virtual lab appliances: <strong>s01_y01_comp-10018_revc1.ova</strong> and <strong>w01_comp-10018_rev2a.ova</strong> </li>
+		<li>The comp-10018 virtual lab appliance(s) containing: s01, y01, w01
 		<li>Oracle VirtualBox software, found on all lab systems at the college and available from <a href="http://virtualbox.org" target="blank">http://virtualbox.org</a>
 	</ul>
 
@@ -73,7 +73,7 @@ You should now have the virtual lab systems available in VirtualBox.
 
 
 <hr>
-<h2>Part B: Boot The w01 and s01</h2>
+<h2>Part B: Boot w01 and s01</h2>
 <p class="description">
 This is probably the easiest part of the lab.  Simply start each VM.
 </p>
@@ -173,7 +173,7 @@ hostname
 <ul>
 <li>You may use vi/vim or nano to edit the file </li>
 <li>For an excellent vim tutorial run the <strong>vimtutor</strong> command <em>(only available on w01)</em> </li>
-<li>A <a href="https://staffwww.fullcoll.edu/sedwards/Nano/IntroToNano.html">nano introduction</a> from California's oldest community college.  </li>
+<li>The <a href="https://www.nano-editor.org/docs.php">nano documentation</a> </li>
 <li>Don't forget the file name is hello <strong>not</strong> hello.txt </li>
 </ul>
 </li>
@@ -207,8 +207,6 @@ ls &gt; f1.txt
 </li>
 <li>Copy a file, f1.txt, from alice's home directory on w01 to the /tmp directory on s01.
 <ol type="a">
-<li>Log on to w01 as alice and open a terminal window.
-</li>
 <li>Use scp to copy f1.txt to s01
 <pre class="code">
 scp f1.txt root@10.1.1.20:/tmp/f1.txt
@@ -233,8 +231,7 @@ Throughout this course, including exams, we will run scripts on our systems to c
 
 <ol>
 <h3>These steps run on w01, as alice</h3>
-<li>Open Firefox and logon to Canvas </li>
-<li>Download the file <a href="./host_info_1.zip">host_info_1.zip</a> from Canvas to w01.  Download this file to the <em>Downloads</em> directory.  This file is associated with the dropbox for this lab.  
+<li>Download the file <a href="./host_info_1.zip">host_info_1.zip</a> to the <em>Downloads</em> directory.
 </li>
 
 </li>
@@ -296,7 +293,7 @@ Complete the Canvas quiz for this lab.
 Like most computer systems, we should never just power-off our systems, we should shut them down gracefully.
 </p>
 <ol>
-<li>Log on to s01 as root (root's password is <em>adminpass</em> </li>
+<li>Log on to s01 as root (root's password is <em>adminpass</em>) </li>
 <li>Run the <span class=cmd>shutdown</span> command
 <pre class="code">
 shutdown -h now
