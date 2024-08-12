@@ -8,12 +8,14 @@ Base install
 	tinyproxy
 	zip
 	unzip
+	curl
+	nano
 
 Configure
 	remove panels
 	IP
 	hosts
-	launchers from terminal, firefox
+	launchers for terminal, firefox
 	homepage
 	tinyproxy:
 		- bind to 10.1.1.10
@@ -29,7 +31,9 @@ Clean apt cache
 
 Zero F/S
 	dd if=/dev/zero of=/tmp/foo
+	sync
 	rm /tmp/foo
+	sync
 
 Export Appliance
 	aprox 1GB ova

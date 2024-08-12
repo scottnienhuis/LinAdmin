@@ -1,0 +1,8 @@
+Changes to s01, Summer 2024
+
+Make journal persist:
+
+mkdir /var/log/journal
+systemd -tempfiles --create --prefix /var/log/journal
+uncomment Storage=auto in journalctl.cfg
+
