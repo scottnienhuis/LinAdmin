@@ -53,13 +53,13 @@ logger -p local7.err "FM3: This is fake msg from local7 with pri=err"
 	</li>
 	<li>Use grep to see what log files your message ended up in.
 	<pre class="code">
-grep FM1 $(find /var/log -type f) </pre>
+grep -s FM1 /var/log/* </pre>
 	</li>
 	<pre class="code">
-grep FM2 $(find /var/log -type f) </pre>
+grep -s FM2 /var/log/* </pre>
 	</li>
 	<pre class="code">
-grep FM3 $(find /var/log -type f) </pre>
+grep -s FM3 /var/log/* </pre>
 	</li>
 </ol>
 <hr>
@@ -135,7 +135,7 @@ curl http://localhost
 <hr>
 <h2>Part E: Evaluation</h2>
 <p class="description">
-Run <span class=cmd>host_info_syslog.sh</span>  on <strong>s01</strong> and submit the output to the Canvas dropbox for this lab.
+Run the host_info_log script on <strong>s01</strong> and submit the output to Canvas. <a href="./host_info_log.zip">(host_info_log.zip)</a>
 </p>
 </body>
 </html>

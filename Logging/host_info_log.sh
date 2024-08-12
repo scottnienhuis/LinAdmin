@@ -92,23 +92,23 @@ logger -p cron.error "FM_T3: cron.error"
 sleep 1
 
 spit_start "Part B.1,  (2 points) <br> FM_T1 in maillog, mail_warn, and msg_err"
-grep -l FM_T1 $(find /var/log/ -type f)
+grep -sl FM_T1 /var/log/*
 spit_end
 
 spit_start "Part B.1,  (2 point) <br> FM_T2 in maillog"
-grep -l FM_T2 $(find /var/log/ -type f)
+grep -sl FM_T2 /var/log/*
 spit_end
 
 spit_start "Part B.1,  (2 point) <br> FM_T3 in cron, msg_err"
-grep -l FM_T3 $(find /var/log/ -type f)
+grep -sl FM_T3 /var/log/*
 spit_end
 
 spit_start "Part C: (2 points) <br> authpriv messages from s02 in /var/log/secure"
 grep s02 /var/log/secure 
 spit_end
 
-spit_start "Part D: (2 points) <br> http errors in /var/log/messages"
-grep httpd /var/log/messages | tail -5
+spit_start "Part D: (2 points) <br> httpd autoindex errors in /var/log/messages"
+grep 'httpd.*autoindex' /var/log/messages | tail -5
 spit_end
 
 

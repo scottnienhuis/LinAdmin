@@ -82,9 +82,6 @@ spit_start Hostname
 hostname
 spit_end
 
-spit_start "When was I built?"
-ls -l /var/log/anaconda/anaconda.log
-spit_end
 
 spit_start "When is now?"
 date

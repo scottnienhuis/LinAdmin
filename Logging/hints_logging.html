@@ -43,9 +43,9 @@ mail.*			/var/log/mail.log
 </ul>
 
 <hr>
-<h2>Part C: Remote Logging (w01 to s01)</h2>
+<h2>Part C: Remote Logging (s01 to s01)</h2>
 <p class="description">
-We will now configure <strong>w01</strong> to send log messages to <strong>s01</strong>.  This is very common configuration in production environments.
+We will now configure <strong>s02</strong> to send log messages to <strong>s01</strong>.  This is very common configuration in production environments.
 </p>
 <ol>
 <li>Enable remote logging via TCP on <strong>s01</strong> (<em><strong>hint</strong>: uncomment a total of 2 lines in <strong>rsyslog.conf</strong></em>)
@@ -55,7 +55,7 @@ module(load="imtcp") # needs to be done just once
 input(type="imtcp" port="514")
 </pre>
 </li>
-<li>Configure rsyslog on <strong>w01</strong> to send all security authorization messages (authpriv) to <strong>s01</strong> via TCP 
+<li>Configure rsyslog on <strong>s02</strong> to send all security authorization messages (authpriv) to <strong>s01</strong> via TCP 
 <pre class="code">
 authpriv.*          @@s01:514
 </pre>
@@ -66,7 +66,7 @@ firewall-cmd --permanent --add-port=514/tcp
 firewall-cmd --reload
 </pre>
 </li>
-<li>Log onto <strong>w01</strong> and see if log messages appear on <strong>s01</strong> </li>
+<li>Log onto <strong>s02</strong> and see if log messages appear on <strong>s01</strong> </li>
 </ol>
 
 <hr>

@@ -77,16 +77,16 @@ In this section you will create an NFS share on s01 to be used by any user from 
 <hr>
 <h2>Part D: Logging (5 points) </h2>
 <ol>
-<li>Install and configure httpd to log to rsyslog with a facility of local5</li>
-<li>Configure rsyslog to log all messages from httpd to /var/log/web.log</li>
-<li>Configure rsyslog on s02 to forward authpriv messages to s01 </li>
+<li>s01: Install and configure httpd to log to rsyslog with a facility of local5</li>
+<li>s01: Configure rsyslog to log all messages from httpd to /var/log/web.log</li>
+<li>s02: Configure rsyslog to forward authpriv messages to s01 </li>
 <li>Generate messages to test your changes </li>
 </ol>
 
 <hr>
 <h2>Part E: Grading</h2>
 <p class="description">
-Run the grading script contained in <a href="./host_info_t2.zip">host_info_t2.zip</a> and submit the output to Canvas.
+Run the grading script contained in <a href="./host_info_t2.zip">host_info_t2.zip</a> on s01 and submit the output to Canvas.
 </p>
 <p class="description">
 <strong>Note:</strong> The grading script requires the net-tools package.
