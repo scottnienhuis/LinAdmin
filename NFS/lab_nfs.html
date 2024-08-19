@@ -139,7 +139,7 @@ s01:/shares/backups    6795264  862464   5580800  14% /s01/backups
 cat /s01/backups/ReadMe
 </pre>
 </li>
-<li>Create as simple file on the share
+<li>Try to create as simple file on the share <em>(this should fail)</em>
 <pre class="code">
 echo "hi from root on s02" &gt; /s01/backups/msg_from_root_s02
 </pre>
@@ -179,7 +179,7 @@ exportfs -ar
 </li>
 
 <h3>From s02</h3>
-<li>Try to create our ReadMe file once more
+<li>Try to create our ReadMe file once more <em>(this should fail)</em>
 <pre class="code">
 echo "hi from root on s02" > /s01/backups/msg_from_root_s02
 </pre>
@@ -187,7 +187,7 @@ echo "hi from root on s02" > /s01/backups/msg_from_root_s02
 <li>Better?
 				<a href="javascript:unhide('A3')">Answer</a>
 				<span id="A3" class="hidden">
-				<em>Well a little better.  The error message should have gone from "read-only file system" to "Permission Denied"</em>
+				<em>A little better.  The error message should have gone from "read-only file system" to "Permission Denied"</em>
 				</span>
 </li>
 
